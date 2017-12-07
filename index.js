@@ -75,7 +75,8 @@ function getIdByLink(next){
 		if(obj.paging.next == undefined){
 			arr.forEach((data) =>{
 				danhsach = danhsach + data;
-				danhsach = danhsach + "   ";
+				danhsach = danhsach + ","
+				danhsach = danhsach + "\n";
 			})
 			fs.writeFile("danhsachid.txt",danhsach,() =>{
 				console.log("so id: " + arr.length);
