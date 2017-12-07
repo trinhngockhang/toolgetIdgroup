@@ -26,7 +26,6 @@ app.post("/senUrl",(req,res) =>{
 })
 
 app.get("/result", (req,res) => {
-	var run = true;
 	res.send("Check file: danhsachid.txt");
 	getId();
 })
@@ -49,7 +48,6 @@ function getId(){
 				obj.data.forEach(function(data) {
 					arr.push(data.id);
 				});
-				var run = true;
 				if(next !== undefined){
 					getIdByLink(next);
 				}
@@ -87,10 +85,6 @@ function getIdByLink(next){
 	)
 }
 
-function auto(cb){
-	getId();
-	cb();
-}
 
 app.listen(3000,() => {
 	console.log("server start ");
